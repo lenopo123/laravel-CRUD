@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('produk_id')->constrained('produks')->onDelete('cascade');
             $table->integer('quantity');
             $table->timestamps();
+            $table->string('status')->default('Menunggu');
         });
     }
 
