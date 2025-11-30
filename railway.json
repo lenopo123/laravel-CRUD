@@ -1,8 +1,6 @@
 {
-  "build": {
-    "builder": "NIXPACKS"
-  },
   "deploy": {
-    "startCommand": "php -S 0.0.0.0:$PORT public/index.php"
+    "startCommand": "php -S 0.0.0.0:$PORT public/index.php",
+    "deployHook": "php artisan migrate --force && php artisan storage:link"
   }
 }
